@@ -1,4 +1,4 @@
-BartoszBartniczak\Symfony-Serializer-ArrayObject-Noramlizer
+BartoszBartniczak\Symfony-Serializer-ArrayObject-Noramlizer [![Build Status](https://travis-ci.org/BartoszBartniczak/SymfonySerializerArrayObjectNormalizer.svg?branch=master)](https://travis-ci.org/BartoszBartniczak/SymfonySerializerArrayObjectNormalizer) [![Coverage Status](https://coveralls.io/repos/github/BartoszBartniczak/SymfonySerializerArrayObjectNormalizer/badge.svg?branch=master)](https://coveralls.io/github/BartoszBartniczak/SymfonySerializerArrayObjectNormalizer?branch=master)
 ===========================================================
 ArrayObject Normalizer for Symfony/Serializer component. This Normalizer works with ArrayObject objects and its subclasses.
 ------------------------------------------------
