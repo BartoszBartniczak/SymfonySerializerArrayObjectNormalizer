@@ -32,7 +32,7 @@ $serializer = new Serializer($normalizers, $encoders);
 $json = $serializer->serialize(new \ArrayObject(['a' => 1, 'c' => 3, 'e' => 5, 'g' => 7]), 'json');
 ```
 
-In the `$json` variable you should have now this JSON document:
+In the `$json` variable you should contains now this JSON document:
 
 ```json
 {
@@ -51,7 +51,7 @@ $serializer->deserialize($json, \ArrayObject::class, 'json');
 
 #### Array Of Objects (De-)Serialization
 
-If the ArrayObject contains objects of some class, you need to define the type for deserialization.
+If the `\ArrayObject` contains objects of some class, you need to define the type for deserialization.
 
 ```php
 $arrayOfObjects = new \ArrayObject([
