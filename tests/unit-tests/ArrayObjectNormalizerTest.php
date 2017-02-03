@@ -20,6 +20,15 @@ use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 use Symfony\Component\Serializer\SerializerAwareInterface;
 use Symfony\Component\Serializer\SerializerInterface;
 
+class BuiltinType
+{
+    public function getBuiltinType()
+    {
+        return "int";
+
+    }
+}
+
 class ArrayObjectNormalizerTest extends TestCase
 {
 
@@ -385,14 +394,7 @@ class ArrayObjectNormalizerTest extends TestCase
 
         $arrayObjectNormalizer = new ArrayObjectNormalizer();
         $arrayObjectNormalizer->setSerializer($serializerDeserializerInterface);
-        $arrayObjectNormalizer->denormalize(['test' => new Person('Test')], \ArrayObject::class, 'json', ['key_type' => new class()
-        {
-            public function getBuiltinType()
-            {
-                return "int";
-
-            }
-        }]);
+        $arrayObjectNormalizer->denormalize(['test' => new Person('Test')], \ArrayObject::class, 'json', ['key_type' => new BuiltinType()]);
     }
 
     /**
