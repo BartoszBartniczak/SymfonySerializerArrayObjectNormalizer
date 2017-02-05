@@ -163,7 +163,7 @@ class ArrayObjectNormalizer implements DenormalizerInterface, SerializerAwareInt
         }
     }
 
-    private function containsSubclass($type)
+    protected function containsSubclass($type)
     {
         return (bool)preg_match('/^[a-zA-Z0-9_\x7f-\xff\\\\]+<[a-zA-Z0-9_\x7f-\xff\\\\,]+>$/', $type);
     }
